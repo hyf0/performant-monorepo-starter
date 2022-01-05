@@ -18,7 +18,7 @@
     "url": "https://github.com/iheyunfei/performant-monorepo-starter/issues"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx,cjs,mjs,json,md}": "dprint fmt --verbose"
+    "*.{ts,tsx,js,jsx,cjs,mjs,json}": "dprint fmt --verbose"
   },
   "homepage": "https://github.com/iheyunfei/performant-monorepo-starter#readme",
   "devDependencies": {

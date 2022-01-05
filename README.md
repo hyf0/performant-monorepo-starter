@@ -9,7 +9,5 @@ A Fast and production-ready monorepo template with native toolchain.
   - [docs](https://dprint.dev/overview/)
 - [ ] Linter: eslint
 - [ ] Bundler
--
-  - tsup
--
-  - webpack
+- - tsup
+- - webpack
