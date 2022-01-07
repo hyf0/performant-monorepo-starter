@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "dev": "pnpm build -- --watch",
-    "clean:output": "rimraf dist",
+    "clean:output": "rimraf ./dist",
     "type-check": "tsc --noEmit",
     "build": "pnpm clean:output && tsup src/index.tsx --dts --format cjs,esm --no-splitting --target es5"
   },

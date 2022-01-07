@@ -7,8 +7,24 @@
     "prepare": "husky install",
     "type-check": "pnpm type-check --parallel --recursive",
     "clean:output": "pnpm run -r -p clean:output",
-    "build": "pnpm turbo run build",
+    "build:next": "pnpm turbo run build --scope=next --no-deps --include-dependencies",
+    "build:cra": "pnpm turbo run build --scope=cra --no-deps --include-dependencies",
     "clean:node_modules": "rimraf ./**/node_modules/**"
+  },
+  "turbo": {
+    "baseBranch": "origin/main",
+    "pipeline": {
+      "build": {
+        "dependsOn": ["^build"],
+        "outputs": [".next/**", "./dist/**", "./build/**"]
+      },
+      "lint": {
+        "outputs": []
+      },
+      "dev": {
+        "cache": false
+      }
+    }
   },
   "repository": {
     "type": "git",
@@ -24,21 +40,7 @@
     "*.{ts,tsx,js,jsx,cjs,mjs,json}": "dprint fmt"
   },
   "homepage": "https://github.com/iheyunfei/performant-monorepo-starter#readme",
-  "turbo": {
-    "baseBranch": "origin/main",
-    "pipeline": {
-      "build": {
-        "dependsOn": ["^build"],
-        "outputs": [".next/**", "./dist/**"]
-      },
-      "lint": {
-        "outputs": []
-      },
-      "dev": {
-        "cache": false
-      }
-    }
-  },
+
   "devDependencies": {
     "dprint": "^0.19.2",
     "husky": "^7.0.4",
