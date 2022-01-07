@@ -11,3 +11,4 @@ A Fast and production-ready monorepo template with native toolchain.
 - [ ] Bundler
   - tsup
   - webpack
+- [x] Build System: turborepo
