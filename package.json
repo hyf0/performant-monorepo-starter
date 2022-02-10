@@ -15,8 +15,20 @@
     "baseBranch": "origin/main",
     "pipeline": {
       "build": {
-        "dependsOn": ["^build"],
-        "outputs": [".next/**", "./dist/**", "./build/**"]
+        "dependsOn": [
+          "type-check",
+          "^build"
+        ],
+        "outputs": [
+          ".next/**",
+          "./dist/**",
+          "./build/**"
+        ]
+      },
+      "type-check": {
+        "dependsOn": [
+          "^type-check"
+        ]
       },
       "lint": {
         "outputs": []
@@ -40,14 +52,16 @@
     "*.{ts,tsx,js,jsx,cjs,mjs,json}": "dprint fmt"
   },
   "homepage": "https://github.com/iheyunfei/performant-monorepo-starter#readme",
-
   "devDependencies": {
     "dprint": "^0.19.2",
+    "eslint": "^8.8.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-node": "^11.1.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.1.5",
+    "lint-staged": "^12.3.3",
     "rimraf": "^3.0.2",
-    "tsup": "^5.11.10",
-    "turbo": "^1.0.24",
-    "typescript": "^4.5.4"
+    "tsup": "^5.11.13",
+    "turbo": "^1.1.2",
+    "typescript": "^4.5.5"
   }
 }

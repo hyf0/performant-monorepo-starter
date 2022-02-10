@@ -1,4 +1,4 @@
-import { Counter } from '@infra/components'
+import { Counter } from '@packages/components'
 import Head from 'next/head'
 import Image from 'next/image'
 

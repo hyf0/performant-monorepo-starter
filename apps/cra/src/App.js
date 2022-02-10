@@ -1,8 +1,8 @@
-import { Counter } from '@infra/components'
+import { Counter } from '@packages/components'
 
 import './App.css'
 import logo from './logo.svg'
-
+let s = 1
 function App() {
   return (
     <div className="App">
