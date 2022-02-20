@@ -4,7 +4,10 @@
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "types": "index.d.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
   "exports": {
     ".": {
       "require": "./dist/index.js",
@@ -15,6 +18,7 @@
   "scripts": {
     "build": "tsup src/*.ts",
     "dev": "tsup src/*.ts --watch src",
+    "type-check": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
