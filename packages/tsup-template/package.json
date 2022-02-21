@@ -1,5 +1,5 @@
 {
-  "name": "tsup-template",
+  "name": "@packages/tsup-template",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
